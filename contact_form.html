@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./mycss.css" />
+  </head>
+  <body>
+    <!-- contact - container -->
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" id="myForm">
+            <input type="hidden" name="access_key" value="d31f8803-06f4-40a3-b584-8459e0c00a8a">
+      <!-- left - container -->
+      <div class="left-container">
+        <!-- contact titile -->
+        <div class="contact-us">
+          <h3>CONTACT US</h3>
+          <hr>
+        </div>
+
+        <!-- contact - inputs -->
+        <input type="text" class="contact-inputs" name="name" placeholder="Enter your name" />
+        <input type="email"class="contact-inputs" name="email" placeholder="Enter your email" />
+        <textarea
+            class="message"
+          name="message"
+          id=""
+          placeholder="Enter your message"
+        ></textarea>
+        <!-- button -->
+        <button type="submit">
+          Submit
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F8E6D0"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+          <!-- <img src="./asserts/arrow_icon.png" alt="" /> -->
+        </button>
+    </form>
+      </div>
+
+      <!-- right - container -->
+      <div class="right-container">
+        <!-- <img src="./asserts/sun.gif" alt="" /> -->
+        <div id="observablehq-chart-aeb5db5c"></div>
+    </div>
+  </body>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
+/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@d3/disjoint-force-directed-graph/2.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-aeb5db5c"));
+});
+</script>
+</html>
